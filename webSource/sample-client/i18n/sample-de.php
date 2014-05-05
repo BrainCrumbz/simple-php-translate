@@ -11,4 +11,3 @@ EOS
 ,
 	'another id' => "Another German translation",
 );
-?>

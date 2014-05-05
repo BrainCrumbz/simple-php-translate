@@ -17,4 +17,3 @@ Shared with &#x2764; by <a href='http://www.braincrumbz.com' target='_blank' rel
 EOS
 	,
 );
-?>
