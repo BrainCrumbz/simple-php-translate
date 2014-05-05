@@ -23,6 +23,27 @@
 </head>
 <body>
 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../"><?php t('common test home') ?></a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    <!--/ Fixed navbar -->
+
+    <!-- Page main content -->
     <div class="container">
       <div class="page-header">
 		<h1><?php t('some-page header') ?></h1>
@@ -44,6 +65,7 @@
         <a href="../../another-page/<?php slug()?>"><?php t('some-page go to another') ?></a>
       </p>
     </div>
+    <!--/ Page main content -->
 
     <div id="footer">
       <div class="container">
@@ -52,6 +74,7 @@
     </div>
 
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<!-- Credits for this page' original template to http://getbootstrap.com/examples/sticky-footer-navbar/ -->
 
 </body>
 </html>

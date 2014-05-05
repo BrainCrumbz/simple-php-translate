@@ -22,6 +22,7 @@ EOS
 	'another-page switch text' => "Cambia lingua",
 	'another-page switch url' => "../en",
 
+	'common test home' => "Vai alla home",
 	'common meta description' => "Pagina di test del progetto Simple PHP Translate",
 	'common footer' => <<< EOS
 Condiviso con &#x2764; da <a href='http://www.braincrumbz.com' target='_blank' rel='nofollow'>BrainCrumbz</a>, 2014.
