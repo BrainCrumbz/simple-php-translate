@@ -1,19 +1,19 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Test page for Simple PHP Translate project">
     <meta name="author" content="BrainCrumbz">
-	<link rel="shortcut icon" href="public/ico/favicon.ico">
+	<link rel="shortcut icon" href="./public/ico/favicon.ico">
 	
     <title>Test page for Simple PHP Translate project</title>
 	
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	<!-- Custom styles for sticky footer template -->
-    <link href="public/css/sticky-footer.css" rel="stylesheet">
+    <link href="./public/css/sticky-footer.css" rel="stylesheet">
 	
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -28,12 +28,34 @@
 		<h1>Simple PHP Translate project</h1>
       </div>
       <p class="lead">Test page for Simple PHP Translate project.</p>
-      <p>.</p>
+      <p>
+        In this example, a page can be found in English at a given URL ending with <code>/en/</code>. 
+        The same page translated in Italian has then the same URL ending with <code>/it/</code> instead.
+      </p>
+      <p>
+        The actual PHP source file invoked is the same in both cases and that contains helper functions allowing
+        the insertion of translated text resources and localised URL parts.
+      </p>
+      <div class="well well-sm">
+        For sake of simplicity there's no real PHP routing mechanism in this example. In order to emulate that, there are
+        pages placed at given URLs whose only task is to <em>include</em> the actual PHP source file.
+      </div>
+      <p>
+        PHP source file uses the <em>SimplePhpTranslate</em> component, which devises page 
+        language by checking its request URL and looking for a slug in the form <code>blabla<strong>/lang/</strong>blabla</code>, 
+        where <code>lang</code> is one of the supported language codes.
+      </p>
+      <div class="well well-sm">
+        <em>SimplePhpTranslate</em> can be quickly modified in order to support other language recognition techniques: 
+        there is just one method that has to be changed.
+      </div>
+      <p>An example of page in English can be found <a href="some-page/en/">here</a>.</p>
+      <p>The same page in Italian can be found <a href="some-page/it/">here</a></p>
     </div>
 
     <div id="footer">
       <div class="container">
-        <p class="text-muted">Created by <a href='http://www.braincrumbz.com' target='_blank' rel='nofollow'>BrainCrumbz</a>.</p>
+        <p class="text-muted">Shared with &hearts; by <a href='http://www.braincrumbz.com' target='_blank' rel='nofollow'>BrainCrumbz</a>, 2014.</p>
       </div>
     </div>
 
