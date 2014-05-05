@@ -34,6 +34,15 @@
       <p>
         <?php t('some-page more content') ?>
       </p>
+      <hr/>
+      <a href="<?php t('some-page switch url') ?>" class="btn btn-primary"><?php t('some-page switch text') ?></a>
+      <hr/>
+      <p>
+        <?php t('some-page look attribute') ?>
+      </p>
+      <p>
+        <a href="../../another-page/<?php slug()?>"><?php t('some-page go to another') ?></a>
+      </p>
     </div>
 
     <div id="footer">

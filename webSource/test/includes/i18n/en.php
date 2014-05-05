@@ -11,6 +11,10 @@ Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox n
 Brick quiz whangs jumpy veldt fox. Bright vixens jump; dozy fowl quack. Quick wafting zephyrs vex bold Jim. 
 EOS
 	,
+	'some-page switch text' => "Switch to the other language",
+	'some-page switch url' => "../it",
+    'some-page look attribute' => "Also, please have a look at the <code>html lang</code> attribute from this page source",
+    'some-page go to another' => "Go to a different page",
 	
 	'common footer' => <<< EOS
 Shared with &#x2764; by <a href='http://www.braincrumbz.com' target='_blank' rel='nofollow'>BrainCrumbz</a>, 2014.
