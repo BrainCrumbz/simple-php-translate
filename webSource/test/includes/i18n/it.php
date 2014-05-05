@@ -1,6 +1,5 @@
 <?php 
 $i18nResources['it'] = array(
-	'some-page meta description' => "Pagina di test del progetto Simple PHP Translate",
     'some-page title' => "Una pagina di esempio in Italiano",
 	'some-page header' => "Una pagina d'esempio, in Italiano",
 	'some-page lead' => "I contenuti di questa pagina provengono da risorse di testo tradotte in lingua",
@@ -13,9 +12,17 @@ EOS
 	,
 	'some-page switch text' => "Passa all'altra lingua",
 	'some-page switch url' => "../en",
-    'some-page look attribute' => "In aggiunta, dai un'occhiata nei sorgenti della pagina all'attributo <code>lang</code> dell'elemento <code>html</code>",
+    'some-page look attribute' => "In aggiunta, dai un'occhiata nei sorgenti della pagina all'attributo <code>lang</code> dell'elemento <code>html</code>.",
     'some-page go to another' => "Vai verso un'altra pagina",
-	
+
+    'another-page title' => "Altra pagina di esempio in Italiano",
+	'another-page header' => "Un'altra pagina d'esempio",
+	'another-page lead' => "Ancora in Italiano",
+	'another-page content' => "Anche i contenuti di questa pagina provengono da risorse di testo tradotte.",
+	'another-page switch text' => "Cambia lingua",
+	'another-page switch url' => "../en",
+
+	'common meta description' => "Pagina di test del progetto Simple PHP Translate",
 	'common footer' => <<< EOS
 Shared with &#x2764; by <a href='http://www.braincrumbz.com' target='_blank' rel='nofollow'>BrainCrumbz</a>, 2014.
 EOS

@@ -8,7 +8,7 @@
     <meta name="author" content="BrainCrumbz">
 	<link rel="shortcut icon" href="../../public/ico/favicon.ico">
 	
-    <title><?php t('some-page title') ?></title>
+    <title><?php t('another-page title') ?></title>
 	
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -25,24 +25,14 @@
 
     <div class="container">
       <div class="page-header">
-		<h1><?php t('some-page header') ?></h1>
+		<h1><?php t('another-page header') ?></h1>
       </div>
-      <p class="lead"><?php t('some-page lead') ?></p>
+      <p class="lead"><?php t('another-page lead') ?></p>
       <p>
-        <?php t('some-page content') ?>
-      </p>
-      <p>
-        <?php t('some-page more content') ?>
+        <?php t('another-page content') ?>
       </p>
       <hr/>
-      <a href="<?php t('some-page switch url') ?>" class="btn btn-primary"><?php t('some-page switch text') ?></a>
-      <hr/>
-      <p>
-        <?php t('some-page look attribute') ?>
-      </p>
-      <p>
-        <a href="../../another-page/<?php slug()?>"><?php t('some-page go to another') ?></a>
-      </p>
+      <a href="<?php t('another-page switch url') ?>" class="btn btn-primary"><?php t('another-page switch text') ?></a>
     </div>
 
     <div id="footer">

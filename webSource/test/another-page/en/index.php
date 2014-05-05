@@ -1,0 +1,1 @@
+<?php define('TEST_ROOT', '../../'); include(TEST_ROOT . 'includes/pages/another-page.inc.php'); ?>
