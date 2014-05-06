@@ -1,6 +1,11 @@
 <?php 
-
-// Assumes that the caller has already defined a $translate variable
+/**
+  * Sample script showing how to add translated resources for a language. 
+  *
+  * This script assumes that caller has already included Translate component.
+  *
+  * @author  BrainCrumbz <team@braincrumbz.com>
+  */
 
 Translate::getInstance()->addLanguage('it', array(
 	'some unique id' => "Text translated in Italian",
