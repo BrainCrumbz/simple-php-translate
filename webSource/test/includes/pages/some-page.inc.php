@@ -73,7 +73,9 @@
       </div>
     </div>
 
+	<!--
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	-->
 	<!-- Credits for this page' original template to http://getbootstrap.com/examples/sticky-footer-navbar/ -->
 
 </body>
