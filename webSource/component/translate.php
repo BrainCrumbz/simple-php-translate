@@ -178,33 +178,85 @@ class Translate {
     }
 	
 	/**
-    * @var  Array  Hashmap of translated resources for each language.
+    * @var  Array  Hashmap of translated resources for all languages. 
+    * Every item represents a language with its resources: the key is a language ID, 
+    * the value is a hashmap of its text resources. 
+    * For each hashmap of text resources: an item has the resource ID as key and 
+    * resource text translation as value.
     */
 	private $resourceSets;
+	
+	/**
+    * @var  string  Explicit override on detected language.
+    * When empty, it means that no override has been set. Otherwise it holds the
+    * language ID set to override any detection.
+    */
 	private $langOverride;
+	
+	/**
+    * @var  object  Current translator.
+    * It holds the current translator, depending on whether there's a current language
+    * defined or not. Methods that inserts translations in the page are delegated to 
+    * this object.
+    */
 	private $translator;
 	
 	// Singleton access 
 	
+	/**
+	  * Initialises translation.
+	  * 
+	  * This is invoked once and only once per each page where translation is needed.
+	  */
 	public static function initialize() {
 		self::$instance = new Translate();
 	}
 	
+	/**
+	  * Gets current translation component instance.
+	  * 
+	  * This allows a singleton-type of access to the translation component within
+	  * the page. It's an alternative to using globals.
+	  * 
+	  * @return  string  The single instance of Translate component.
+	  */
 	public static function getInstance() {
 		return self::$instance;
 	}
 	
+	/**
+    * @var  object  Single instance of Translate component.
+    */
 	private static $instance = NULL;
 }
 
+/**
+  * Inserts translation of a text resource into page.
+  * 
+  * Echoes the translation of a text resource in current language into the page, given resource 
+  * unique identifier.
+  * 
+  * @param  string  $resId  The unique identifier of the resource to translate. 
+  */
 function t($resId) {
 	echo Translate::getInstance()->translate($resId);
 }
 
+/**
+  * Inserts current language into page.
+  * 
+  * Echoes unique ID of the current defined language into the page.
+  */
 function lang() {
 	echo Translate::getInstance()->lang();
 }
 
+/**
+  * Inserts URI slug of current language into page.
+  * 
+  * Echoes an URL part that can be used to refer to other pages in the same 
+  * language as current one.
+  */
 function slug() {
 	echo Translate::getInstance()->uriSlug();
 }
