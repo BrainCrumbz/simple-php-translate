@@ -1,12 +1,11 @@
 <?php
+
 require_once(TEST_ROOT . '../component/translator.php');
 
 $translator = new Translator();
 
 require_once(TEST_ROOT . 'includes/i18n/en.php');
 require_once(TEST_ROOT . 'includes/i18n/it.php');
-
-$translator->findLanguage();
 
 function t($resId) {
 	global $translator;

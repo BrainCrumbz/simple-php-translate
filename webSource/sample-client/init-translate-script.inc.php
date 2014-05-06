@@ -13,8 +13,6 @@ require_once('/sample-client/i18n/sample-de.php');
 require_once('/sample-client/i18n/sample-en.php');
 require_once('/sample-client/i18n/sample-it.php');
 
-$translator->findLanguage();
-
 function t($resId) {
 	echo $translator->translate($resId);
 }

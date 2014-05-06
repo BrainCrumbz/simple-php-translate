@@ -2,45 +2,31 @@
 
 class Translator {
 	
-	private $resourceSets;
-	private $langOverride;
-	
-	private $resources;
-	private $currentLang;
-	
 	public function __construct() {
 		$this->resourceSets = array();
-		$this->langOverride = '';
+		$this->langOverride = false;
+		
+		$this->currentPageLang = '';
+		$this->resources = NULL;
 	}
 	
 	public function addLanguage($langId, $set) {
 		$this->resourceSets[$langId] = $set;
-	}
-	
-	public function overridePageLanguage($langId) {
-		$this->langOverride = $langId;
-	}
-	
-	public function findLanguage() {
-		if (!empty($this->langOverride)) {
-			$lang = $this->langOverride;
-		}
-		else {
-			$lang = $this->detectLanguageFromUri();
-		}
 		
-		if (array_key_exists($lang, $this->resourceSets)) {
-			$this->resources = $this->resourceSets[$lang];
-			$this->currentLang = $lang;
+		if (empty($this->currentPageLang)) {
+			$this->tryToFindLanguage();
 		}
-		else {
-			throw new Exception('Unsupported language: ' . $lang . '.');
+	}
+	
+	public function tryToFindLanguage() {
+		$this->detectLanguageFromUri();
+		
+		if (!empty($this->currentPageLang)) {
+			$this->resources = $this->resourceSets[$this->currentPageLang];
 		}
 	}
 	
 	private function detectLanguageFromUri() {
-		$lang = '';
-		
 		$pageUrl = $_SERVER['REQUEST_URI'];
 		
 		$supportedLangs = array_keys($this->resourceSets);
@@ -49,16 +35,17 @@ class Translator {
 			$urlPart = '/' . $supportedLang . '/';
 			
 			if (stripos($pageUrl, $urlPart) !== false) {
-				$lang = $supportedLang;
+				$this->currentPageLang = $supportedLang;
 				break;
 			}
 		}
+	}
+	
+	public function overridePageLanguage($langId) {
+		$this->currentPageLang = $langId;
+		$this->resources = $this->resourceSets[$this->currentPageLang];
 		
-		if (empty($lang)) {
-			throw new Exception('Cannot detect page language.');
-		}
-		
-		return $lang;
+		$this->langOverride = true;
 	}
 	
 	public function translate($resId) {
@@ -66,10 +53,16 @@ class Translator {
 	}
 	
 	public function lang() {
-		return $this->currentLang;
+		return $this->currentPageLang;
     }
 	
 	public function slug() {
-		return $this->currentLang;
+		return $this->currentPageLang;
     }
+	
+	private $resourceSets;
+	private $langOverride;
+	
+	private $resources;
+	private $currentPageLang;
 }
