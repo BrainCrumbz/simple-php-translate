@@ -1,44 +1,51 @@
 <?php
-/*
- * NOTE: 
- * this class depends on following globals:
- * 
- * $i18nResources 
- * $overrideLang
- */
 
 class Translator {
-	private static $resources;
-	private static $currentLang;
 	
-	private static $supportedLangs = array('de', 'en', 'it');
+	private $resourceSets;
+	private $langOverride;
 	
-	public static function findLanguage() {
-		global $i18nResources;
-		global $overrideLang;
-		
-		if (isset($overrideLang)) {
-			$lang = $overrideLang;
+	private $resources;
+	private $currentLang;
+	
+	public function __construct() {
+		$this->resourceSets = array();
+		$this->langOverride = '';
+	}
+	
+	public function addLanguage($langId, $set) {
+		$this->resourceSets[$langId] = $set;
+	}
+	
+	public function overridePageLanguage($langId) {
+		$this->langOverride = $langId;
+	}
+	
+	public function findLanguage() {
+		if (!empty($this->langOverride)) {
+			$lang = $this->langOverride;
 		}
 		else {
-			$lang = self::getCurrentLanguage();
+			$lang = $this->detectLanguageFromUri();
 		}
 		
-		if (array_key_exists($lang, $i18nResources)) {
-			self::$resources = $i18nResources[$lang];
-			self::$currentLang = $lang;
+		if (array_key_exists($lang, $this->resourceSets)) {
+			$this->resources = $this->resourceSets[$lang];
+			$this->currentLang = $lang;
 		}
 		else {
 			throw new Exception('Unsupported language: ' . $lang . '.');
 		}
-    }
+	}
 	
-	private static function getCurrentLanguage() {
+	private function detectLanguageFromUri() {
 		$lang = '';
 		
 		$pageUrl = $_SERVER['REQUEST_URI'];
 		
-		foreach (self::$supportedLangs as $supportedLang) {
+		$supportedLangs = array_keys($this->resourceSets);
+		
+		foreach ($supportedLangs as $supportedLang) {
 			$urlPart = '/' . $supportedLang . '/';
 			
 			if (stripos($pageUrl, $urlPart) !== false) {
@@ -54,29 +61,15 @@ class Translator {
 		return $lang;
 	}
 	
-	public static function translate($resId) {
-        return self::$resources[$resId];
+	public function translate($resId) {
+        return $this->resources[$resId];
 	}
 	
-	public static function lang() {
-		return self::$currentLang;
+	public function lang() {
+		return $this->currentLang;
     }
 	
-	public static function slug() {
-		return self::$currentLang;
+	public function slug() {
+		return $this->currentLang;
     }
 }
-
-function t($resId) {
-	echo Translator::translate($resId);
-}
-
-function lang() {
-	echo Translator::lang();
-}
-
-function slug() {
-	echo Translator::slug();
-}
-
-Translator::findLanguage();

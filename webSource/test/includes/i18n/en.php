@@ -1,5 +1,6 @@
 <?php 
-$i18nResources['en'] = array(
+
+$translator->addLanguage('en', array(
     'some-page title' => "Some example page in English",
 	'some-page header' => "Some example page, in English",
 	'some-page lead' => "This page contents are coming from translated text resources.",
@@ -28,4 +29,4 @@ EOS
 Shared with &#x2764; by <a href='http://www.braincrumbz.com' target='_blank' rel='nofollow'>BrainCrumbz</a>, 2014.
 EOS
 	,
-);
+));

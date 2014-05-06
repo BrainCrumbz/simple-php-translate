@@ -1,22 +1,24 @@
 <?php
-/*
- * USAGE: 
- * This script or equivalent one should be placed at the beginning of
- * a page using SimplePhpTranslate.
- * 
- * NOTE: 
- * this script must declare the following globals:
- * 
- * $i18nResources 
- * 
- * and can declare the following optional globals:
- * 
- * $overrideLang
- */
+require_once(TEST_ROOT . '../component/translator.php');
 
-$i18nResources = array();
+$translator = new Translator();
 
 require_once(TEST_ROOT . 'includes/i18n/en.php');
 require_once(TEST_ROOT . 'includes/i18n/it.php');
 
-require_once(TEST_ROOT . '../component/translator.php');
+$translator->findLanguage();
+
+function t($resId) {
+	global $translator;
+	echo $translator->translate($resId);
+}
+
+function lang() {
+	global $translator;
+	echo $translator->lang();
+}
+
+function slug() {
+	global $translator;
+	echo $translator->slug();
+}

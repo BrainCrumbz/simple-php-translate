@@ -1,5 +1,8 @@
 <?php 
-$i18nResources['it'] = array(
+
+// Assumes that the caller has already defined a $translator variable
+
+$translator->addLanguage('it', array(
 	'some unique id' => "Text translated in Italian",
 	'another unique id' => <<< EOS
 some 
@@ -10,4 +13,4 @@ text
 EOS
 ,
 	'another id' => "Another Italian translation",
-);
+));
