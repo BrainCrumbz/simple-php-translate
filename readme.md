@@ -56,12 +56,15 @@ Describe and show how to run the tests with code examples.
 Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
 --->
 
-[pygy](https://github.com/pygy) for his [Romantic WTF Public License](https://github.com/pygy/The-Romantic-WTF-Public-License) :smile:.
+[pygy](https://github.com/pygy) for his [Romantic WTF Public License](https://github.com/pygy/The-Romantic-WTF-Public-License); 
+[jxson](https://gist.github.com/jxson) for his [Readme.md template](https://gist.github.com/jxson/1784669).
 
-## License
+## Copyright and license
 
 <!---
 A short snippet describing the license (MIT, Apache, etc.)
 --->
+
+Copyright (C) 2014 [BrainCrumbz](http://www.braincrumbz.com).
 
 [Romantic WTF Public License](./license.md)
