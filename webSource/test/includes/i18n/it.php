@@ -1,6 +1,6 @@
 <?php 
 
-$translator->addLanguage('it', array(
+$translate->addLanguage('it', array(
     'some-page title' => "Una pagina di esempio in Italiano",
 	'some-page header' => "Una pagina d&rsquo;esempio, in Italiano",
 	'some-page lead' => "I contenuti di questa pagina provengono da risorse di testo tradotte in lingua",

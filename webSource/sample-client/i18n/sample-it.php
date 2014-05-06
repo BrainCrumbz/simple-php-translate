@@ -1,8 +1,8 @@
 <?php 
 
-// Assumes that the caller has already defined a $translator variable
+// Assumes that the caller has already defined a $translate variable
 
-$translator->addLanguage('it', array(
+$translate->addLanguage('it', array(
 	'some unique id' => "Text translated in Italian",
 	'another unique id' => <<< EOS
 some 

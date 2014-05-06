@@ -1,6 +1,6 @@
 <?php
 
-class Translator {
+class Translate {
 	
 	public function __construct() {
 		$this->resourceSets = array();
@@ -73,7 +73,7 @@ class Translator {
 		static $instance = null;
 		
 		if (null === $instance) {
-            $instance = new Translator();
+            $instance = new Translate();
         }
 
         return $instance;
@@ -81,13 +81,13 @@ class Translator {
 }
 
 function t($resId) {
-	echo Translator::getInstance()->translate($resId);
+	echo Translate::getInstance()->translate($resId);
 }
 
 function lang() {
-	echo Translator::getInstance()->lang();
+	echo Translate::getInstance()->lang();
 }
 
 function slug() {
-	echo Translator::getInstance()->slug();
+	echo Translate::getInstance()->slug();
 }

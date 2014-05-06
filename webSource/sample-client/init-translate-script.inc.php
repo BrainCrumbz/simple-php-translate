@@ -5,9 +5,9 @@
  * a page where you plan to use SimplePhpTranslate.
  */
 
-require_once('/component/translator.php');
+require_once('/component/translate.php');
 
-$translator = Translator::getInstance();
+$translate = Translate::getInstance();
 
 require_once('/sample-client/i18n/sample-de.php');
 require_once('/sample-client/i18n/sample-en.php');
