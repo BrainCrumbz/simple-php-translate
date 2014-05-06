@@ -12,15 +12,3 @@ $translator = new Translator();
 require_once('/sample-client/i18n/sample-de.php');
 require_once('/sample-client/i18n/sample-en.php');
 require_once('/sample-client/i18n/sample-it.php');
-
-function t($resId) {
-	echo $translator->translate($resId);
-}
-
-function lang() {
-	echo $translator->lang();
-}
-
-function slug() {
-	echo $translator->slug();
-}

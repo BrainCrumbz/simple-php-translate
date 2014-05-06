@@ -65,4 +65,29 @@ class Translator {
 	
 	private $resources;
 	private $currentPageLang;
+	
+	// Singleton access 
+	
+	public static function getInstance() {
+		
+		static $instance = null;
+		
+		if (null === $instance) {
+            $instance = new Translator();
+        }
+
+        return $instance;
+	}
+}
+
+function t($resId) {
+	echo Translator::getInstance()->translate($resId);
+}
+
+function lang() {
+	echo Translator::getInstance()->lang();
+}
+
+function slug() {
+	echo Translator::getInstance()->slug();
 }
