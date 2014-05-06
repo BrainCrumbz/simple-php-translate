@@ -80,16 +80,15 @@ class Translate {
 	
 	// Singleton access 
 	
-	public static function getInstance() {
-		
-		static $instance = null;
-		
-		if (null === $instance) {
-            $instance = new Translate();
-        }
-
-        return $instance;
+	public static function initialize() {
+		self::$instance = new Translate();
 	}
+	
+	public static function getInstance() {
+		return self::$instance;
+	}
+	
+	private static $instance = NULL;
 }
 
 function t($resId) {
@@ -103,3 +102,5 @@ function lang() {
 function slug() {
 	echo Translate::getInstance()->slug();
 }
+
+Translate::initialize();

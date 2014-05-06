@@ -7,8 +7,6 @@
 
 require_once('/component/translate.php');
 
-$translate = Translate::getInstance();
-
 require_once('/sample-client/i18n/sample-de.php');
 require_once('/sample-client/i18n/sample-en.php');
 require_once('/sample-client/i18n/sample-it.php');

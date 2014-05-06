@@ -1,6 +1,6 @@
 <?php 
 
-$translate->addLanguage('en', array(
+Translate::getInstance()->addLanguage('en', array(
     'some-page title' => "Some example page in English",
 	'some-page header' => "Some example page, in English",
 	'some-page lead' => "This page contents are coming from translated text resources.",

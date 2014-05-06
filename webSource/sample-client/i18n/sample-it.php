@@ -2,7 +2,7 @@
 
 // Assumes that the caller has already defined a $translate variable
 
-$translate->addLanguage('it', array(
+Translate::getInstance()->addLanguage('it', array(
 	'some unique id' => "Text translated in Italian",
 	'another unique id' => <<< EOS
 some 
