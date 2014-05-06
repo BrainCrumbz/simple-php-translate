@@ -17,8 +17,4 @@ class BrokenTranslator {
 	public function lang() {
         throw new Exception('Language not set');
     }
-	
-	public function slug() {
-        throw new Exception('Language not set');
-    }
 }

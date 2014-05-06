@@ -19,10 +19,6 @@ class WorkingTranslator {
 		return $this->currentPageLang;
     }
 	
-	public function slug() {
-		return $this->currentPageLang;
-    }
-	
 	private $currentPageLang;
 	private $resources;
 }
