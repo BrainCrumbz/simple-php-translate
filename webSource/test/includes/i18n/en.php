@@ -22,6 +22,16 @@ EOS
 	'another-page content' => "This page contents are also coming from translated text resources.",
 	'another-page switch text' => "Change language",
 	'another-page switch url' => "../it",
+  
+    'manual-page title' => "Page with manually set language",
+    'manual-page header' => "Page with manually set language",
+	'manual-page lead' => "Language set is English",
+	'manual-page content' => <<< EOS
+This page contents are coming from translated text resources. <hr/>
+Last URL portion is not needed in order to work with SimplePhpTranslate component. 
+That is only related to the way these test pages are organized.
+EOS
+    ,
 
 	'common test home' => "Test home",
 	'common meta description' => "Test page for Simple PHP Translate project",

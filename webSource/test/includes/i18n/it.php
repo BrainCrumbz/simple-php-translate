@@ -23,6 +23,16 @@ EOS
 	'another-page switch text' => "Cambia lingua",
 	'another-page switch url' => "../en",
 
+    'manual-page title' => "Pagina con lingua assegnata manualmente",
+    'manual-page header' => "Pagina con lingua assegnata manualmente",
+	'manual-page lead' => "La lingua impostata è l'Italiano",
+	'manual-page content' => <<< EOS
+I contenuti di questa pagina provengono da risorse di testo tradotte. <hr/>
+L'ultima porzione di URL non è necessaria al funzionamento del componente SimplePhpTranslate. 
+E' soltanto funzionale a come sono strutturate queste pagine di test.
+EOS
+    ,
+  
 	'common test home' => "Vai alla home",
 	'common meta description' => "Pagina di test del progetto Simple PHP Translate",
 	'common footer' => <<< EOS

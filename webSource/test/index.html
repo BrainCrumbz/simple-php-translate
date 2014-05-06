@@ -30,11 +30,11 @@
       <p class="lead">Test page for Simple PHP Translate project.</p>
       <p>
         In this example, a page can be found in English at a given URL ending with <code>/en/</code>. 
-        The same page translated in Italian has then the same URL ending with <code>/it/</code> instead.
+        The same page translated in Italian has then the same base URL, ending with <code>/it/</code> instead.
       </p>
       <p>
-        The actual PHP source file invoked is the same in both cases and that contains helper functions allowing
-        the insertion of translated text resources and localised URL parts.
+        The actual PHP source file invoked is the same in both cases. Wherever needed, it uses helper functions provided
+		 by the library in order to insert translated text resources and localised URL parts.
       </p>
       <div class="well well-sm">
         For sake of simplicity there's no real PHP routing mechanism in this example. In order to emulate that, there are
@@ -50,8 +50,11 @@
         there is just one method that has to be changed.
       </div>
       <h2>Sample pages</h2>
-      <p>An example of page in English can be found <a href="some-page/en/">here</a>.</p>
-      <p>The same page in Italian can be found <a href="some-page/it/">here</a></p>
+      <ol type="a">
+        <li>An example of page in English can be found <a href="some-page/en/">here</a>.</li>
+        <li>The same page in Italian can be found <a href="some-page/it/">here</a></li>
+        <li>A page with no specific URL ending, where language has been manually set, can be found <a href="manually-set-page/dummy/">here</a></li>
+      </ol>
     </div>
 
     <div id="footer">

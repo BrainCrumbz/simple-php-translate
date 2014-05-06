@@ -1,0 +1,1 @@
+<?php define('TEST_ROOT', '../../'); include(TEST_ROOT . 'includes/pages/manually-set-page.inc.php'); ?>

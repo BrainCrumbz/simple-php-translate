@@ -64,8 +64,8 @@ class Translate {
 		else {
 			$supportedLangs = array_keys($this->resourceSets);
 			
-			if (in_array($langOverride, $supportedLangs)) {
-				$lang = $langOverride;
+			if (in_array($this->langOverride, $supportedLangs)) {
+				$lang = $this->langOverride;
 			}
 		}
 		
