@@ -7,7 +7,7 @@
 
 require_once('/component/translator.php');
 
-$translator = new Translator();
+$translator = Translator::getInstance();
 
 require_once('/sample-client/i18n/sample-de.php');
 require_once('/sample-client/i18n/sample-en.php');
