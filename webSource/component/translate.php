@@ -148,8 +148,6 @@ class Translate {
 	  * 
 	  * Gets unique ID of the current language, if any has been defined with its translations.
 	  * 
-	  * @param  string  $resId  The unique identifier of the resource to translate. 
-	  * 
 	  * @return  string  Unique ID of current defined language.
 	  * 
 	  * @throws  Exception if no current language is defined or its translations have

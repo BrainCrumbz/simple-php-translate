@@ -4,7 +4,7 @@
   * Non-working translator, for an undefined language.
   *
   * This translator can be used when no current language has been set 
-  * or when its translated text resources have not been defined.
+  * or when its translated text resources have not been provided.
   *
   * @author  BrainCrumbz <team@braincrumbz.com>
   */
