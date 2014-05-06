@@ -4,7 +4,7 @@
 At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
 --->
 
-SimplePhpTranslate is a PHP component and it allows you to easily insert translated text into web pages.
+*SimplePhpTranslate* is a PHP component and it allows you to easily insert translated text into web pages.
 
 ## Motivation
 
@@ -12,12 +12,14 @@ SimplePhpTranslate is a PHP component and it allows you to easily insert transla
 A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
 --->
 
-SimplePhpTranslate is a simple (quick and dirty?) solution when you need some translation mechanism in a PHP project and cannot/don't want to 
+*SimplePhpTranslate* is a simple (quick and dirty?) solution when you need some translation mechanism in a PHP project and cannot/don't want to 
 use a more structured tranlation framework.  
 Think of scenarios like:
 
  - Your project does not include any framework that already provides translation out-of-the-box (e.g. Zend)
- - You cannot 
+ - Your web hosting provider has not enabled *gettext* PHP extension
+ - You cannot/don't want to install *gettext* extension, e.g. because you're working on Windows environment, 
+ or you don't feel like learning how to do that :smile: yet
 
 ## Code Example
 
@@ -25,8 +27,10 @@ Think of scenarios like:
 Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
 --->
 
-Please have a look at fully commented source code in <code>sample-client</code> directory. 
-For a working example, please have a look at <code>test</code> directory.
+Please have a look at fully commented source code in `sample-client` directory. 
+
+For a working example, please have a look at `test` directory. You can fire-up your web server and browse to `index.html` in that directory. 
+If you like, you can find test page setup instructions for Apache under the `Deploy\Dev\Web Server` directory.
 
 <!---
 ## Installation
