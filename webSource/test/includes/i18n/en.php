@@ -14,12 +14,13 @@ EOS
 	'some-page switch text' => "Switch to the other language",
 	'some-page switch url' => "../it",
     'some-page look attribute' => "Also, please have a look at the <code>html lang</code> attribute from this page source.",
-    'some-page go to another' => "Go to a different page",
+    'some-page go to another' => "Go to another page",
 
     'another-page title' => "Anoher example page in English",
 	'another-page header' => "Another example page",
 	'another-page lead' => "Still in English",
 	'another-page content' => "This page contents are also coming from translated text resources.",
+    'another-page picture' => "The <code>src</code> attribute of this image also changes with page language: ",
 	'another-page switch text' => "Change language",
 	'another-page switch url' => "../it",
   

@@ -52,6 +52,10 @@
       <p>
         <?php t('another-page content') ?>
       </p>
+      <p>
+        <?php t('another-page picture') ?>
+      </p>
+      <img src="../../public/img/flag-<?php lang() ?>.png" />
       <hr/>
       <a href="<?php t('another-page switch url') ?>" class="btn btn-primary"><?php t('another-page switch text') ?></a>
     </div>

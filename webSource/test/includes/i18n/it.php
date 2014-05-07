@@ -20,6 +20,7 @@ EOS
 	'another-page header' => "Un&rsquo;altra pagina d&rsquo;esempio",
 	'another-page lead' => "Ancora in Italiano",
 	'another-page content' => "Anche i contenuti di questa pagina provengono da risorse di testo tradotte.",
+    'another-page picture' => "L'attributo <code>src</code> di questa immagine cambia in base alla lingua della pagina: ",
 	'another-page switch text' => "Cambia lingua",
 	'another-page switch url' => "../en",
 
