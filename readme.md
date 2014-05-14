@@ -68,3 +68,7 @@ A short snippet describing the license (MIT, Apache, etc.)
 Copyright (C) 2014 [BrainCrumbz](http://www.braincrumbz.com).
 
 [Romantic WTF Public License](./license.md)
+
+## Fork it
+
+Your contributions are always welcome!
