@@ -13,7 +13,7 @@ A short description of the motivation behind the creation and maintenance of the
 --->
 
 *SimplePhpTranslate* is a simple (quick and dirty?) solution when you need some translation mechanism in a PHP project and cannot/don't want to 
-use a more structured tranlation framework.  
+use a more structured translation framework.  
 Think of scenarios like:
 
  - Your project does not include any framework that already provides translation out-of-the-box (e.g. Zend)
