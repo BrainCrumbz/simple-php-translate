@@ -4,7 +4,7 @@
 At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
 --->
 
-*SimplePhpTranslate* is a PHP component and it allows you to easily insert translated text into web pages.
+*SimplePhpTranslate* is a PHP component and it allows you to easily insert translated text into web pages. Project home page is [here](http://braincrumbz.github.io/simple-php-translate/)
 
 ## Motivation
 
